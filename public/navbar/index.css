@@ -10,7 +10,15 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  transition: all 0.9s ease;
+  transition: 0.9s ease;
   align-items: center;
   padding: 40px 100px;
+}
+nav .BrandName {
+  position: relative;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+  transform: 0.6s ease;
 }
