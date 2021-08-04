@@ -1,45 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-nav {
-  font-family: "Poppins", sans-serif;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transition: 0.9s ease;
-  align-items: center;
-  padding: 40px 100px;
-}
-nav .Brand-Name {
-  position: relative;
-  font-weight: 700;
-  text-decoration: none;
-  color: black;
-  letter-spacing: 2px;
-  transform: 0.6s ease;
-}
-nav ul {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-nav ul li {
-  position: relative;
-  list-style: none;
-}
-nav ul li a {
-  position: relative;
-  margin: 0 15px;
-  text-decoration: none;
-  color: black;
-  letter-spacing: 2px;
-  font-weight: 500px;
-  transition: 0.4s;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200,300,400,500,600,700&display=swap');
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    height:150vh;
+    background-color: #191c25;
+  }
+  nav.NewStyleNavbar {
+    background-color: #5865F2;
+    padding: 25px 30px;
+  }
+  nav {
+    font-family: "Poppins", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.6s ease;
+    align-items: center;
+    padding: 25px 30px;
+  }
+  nav .Brand-Name {
+    position: relative;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    transition: 0.6s ease;
+  }
+  nav ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul li {
+    position: relative;
+    list-style: none;
+  }
+  nav ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.4s;
+  }
+  .humberger {
+    display: none;
+  }
+  @media (max-width: 760px) {
+    .humberger {
+      display:block;
+    }
+    nav, nav.NewStyleNavbar {
+      padding: 20px 20px;
+    }
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      border-radius: 7px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: #fff;
+    }
+    nav ul {
+      position: absolute;
+      /*align-items: start;*/
+      flex-direction: column;
+      width: 100%;
+      top: -3000%;
+      /*top: 68px;*/
+      left: 0;
+     /* padding-left: 5px;*/
+      transition: 0.7s ease;
+    }
+    nav ul li a {
+      margin-bottom: 20px;
+      padding: 10px;
+      display: block !important;
+      width: 100%;
+      font-size: 18px;
+    }
+    nav.NewStyleNavbar ul {
+      background-color: #5865F2;
+      box-shadow: 1px 7px 10px rgba(0,0,0,0.4);
+    }
+  }
