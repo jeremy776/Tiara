@@ -3,8 +3,8 @@ const App = Express();
 
 App.get("/", function(Req, Res) {
   Res.render("index.html", {
-    Req:Req,
-    Res:Res
+    Req: Req,
+    Res: Res
   });
 });
 
