@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-.nav {
+nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,4 +12,5 @@
   justify-content: space-between;
   transition: all 0.9s ease;
   align-items: center;
+  padding: 40px 100px;
 }
