@@ -1,16 +1,11 @@
-const express = require("express");
-const app = express();
+const Express = require("express");
+const App = Express();
 
-/*
-app.set("views", __dirname + '/views');
-app.engine('html', require('ejs').renderFile);
-*/
-
-app.get("/", function(req, res) {
+App.get("/", function(req, res) {
   res.render("index.html", {
     req:req,
     res:res
   });
 });
 
-app.listen(process.env.PORT);
+App.listen(process.env.PORT);
