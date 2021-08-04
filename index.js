@@ -3,7 +3,7 @@ const App = Express();
 const Title = "Night Rest";
 
 App.get("/", function(Req, Res) {
-  Res.render("index.html", {
+  Res.render("index.ejs", {
     Req: Req,
     Res: Res,
     Title: Title
