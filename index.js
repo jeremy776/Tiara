@@ -1,10 +1,10 @@
 const Express = require("express");
 const App = Express();
 
-App.get("/", function(req, res) {
-  res.render("index.html", {
-    req:req,
-    res:res
+App.get("/", function(Req, Res) {
+  Res.render("index.html", {
+    Req:Req,
+    Res:Res
   });
 });
 
