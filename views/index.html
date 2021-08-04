@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+    <title>Testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Hello world</h1>
+    
+    <script>
+      if("speechSynthesis" in window) {
+        function setSpeech() {
+          return new Promise(function (resolve, reject) {
+    let id;
+
+    id = setInterval(() => {
+      if (speechSynthesis.getVoices().length !== 0) {
+        resolve(speechSynthesis.getVoices());
+        clearInterval(id);
+      }
+    }, 10);
+  });
+}
+
+setSpeech().then((voices) => {
+  console.log(voices.map(x => x.name));
+
+          const message = new SpeechSynthesisUtterance();
+          message.text = ""// "hello jeremy, good afternoon. Now is sunday"// "karena itu tuh baru bangun, jam berapa jadi jadwal nya";
+          message.lang = voices[6].lang;
+          //message.voice = voices[2];
+          message.voiceURI = voices[6].voiceURI;
+          message.volume = 1;
+          /*message.rate = 0.9;
+          message.pitch = 1;*/
+          message.voice = voices[6];
+
+          window.speechSynthesis.cancel();
+          window.speechSynthesis.speak(message);
+      })
+      } else {
+        alert("Not support");
+      }
+    </script>
+  </body>
+</html>
