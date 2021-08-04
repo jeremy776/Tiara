@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const ejs = require("ejs");
 
 app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
