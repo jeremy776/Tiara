@@ -18,6 +18,7 @@ module.exports = class NightRest extends AkairoClient {
             allowMention: false,
             directory: join(__dirname, '..', 'Commands'),
             defaultCooldown: 3000,
+            prefix: Config.prefix,
             argumentDefaults: {
                 prompt: {
                     timeout: Embed('info', 'Timeout.'),
