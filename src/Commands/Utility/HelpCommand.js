@@ -21,14 +21,14 @@ module.exports = class HelpCommand extends Command {
   async exec(msg, { command }) {
     try {
       if (!command) {
-        const embed = this.client.Embed('info')
-          .addField(`${this.client.user.username} command's`, `${this.client.config.prefix}help [command]`);
+        const embed = this.client.embed('info')
+          .setAuthor(this.client.user.username + " List Commands")
         for (const category of this.handler.categories.values()) {
           embed.addField(category, `${category.filter((cmd) => cmd.aliases.length > 0).map((cmd) => `\`${cmd.aliases[0]}\``).join(', ')}`);
         }
         return msg.channel.send(embed);
       }
-      const embed = this.client.Embed('info')
+      const embed = this.client.embed('info')
         .addField('Description', `${command.description.content ? command.description.content : ''} ${command.description.ownerOnly ? '\n**[Owner Only]**' : ''}`)
         .addField('Alias', command.aliases.length > 1 ? `\`${command.aliases.join('` `')}\`` : 'None.', true)
         //.addField('Examples', command.description.examples && command.description.examples.length ? `\`${command.aliases[0]} ${command.description.examples.join(`\`\n\`${command.aliases[0]} `)}\`` : 'None.');
