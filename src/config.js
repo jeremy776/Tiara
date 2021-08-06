@@ -1,4 +1,4 @@
 module.exports = {
-    prefix: "n!",
-    ownersID: ['428922145108656139']
+    prefix: "t!",
+    ownersID: ['428922145108656139', '552492140270452736']
 }
