@@ -21,7 +21,7 @@ module.exports = class HelpCommand extends Command {
   async exec(msg, { command }) {
     try {
       if (!command) {
-        const embed = this.client.embed('default', `>>> Hallo **${msg.author.username}**, Saya **${this.client.user.username}** dan saya berasal dari **Indonesia**, berikut adalah beberapa command yang bisa di gunakan. Gunakan **${this.client.config.prefix}command** untuk menjalankan command, ketik **${this.client.config.prefix}help nama_command** untuk mendapatkan informasi tentang command.\nPrefix: **${this.client.config.prefix}**`)
+        const embed = this.client.embed('default', `>>> Hallo **${msg.author.username}**, Saya **${this.client.user.username}** dan berasal dari **Indonesia**, berikut adalah beberapa command yang bisa di gunakan. Ketik **${this.client.config.prefix}command** untuk menjalankan command, ketik **${this.client.config.prefix}help nama_command** untuk mendapatkan informasi tentang command.\nPrefix: **${this.client.config.prefix}**`)
           .setAuthor(this.client.user.username + " List Commands")
         for (const category of this.handler.categories.values()) {
           embed.addField(category, `${category.filter((cmd) => cmd.aliases.length > 0).map((cmd) => `**\`${cmd.aliases[0]}\`**`).join(', ')}`);
@@ -31,10 +31,8 @@ module.exports = class HelpCommand extends Command {
       const embed = this.client.embed('default')
         .addField('Description', `${command.description.content ? command.description.content : ''} ${command.description.ownerOnly ? '\n**[Owner Only]**' : ''}`)
         .addField('Alias', command.aliases.length > 1 ? `\`${command.aliases.join('` `')}\`` : 'None.', true)
-        //.addField('Examples', command.description.examples && command.description.examples.length ? `\`${command.aliases[0]} ${command.description.examples.join(`\`\n\`${command.aliases[0]} `)}\`` : 'None.');
       return msg.channel.send(embed);
     } catch (e) {
-      //this.client.logger.error(e.message);
       return msg.channel.send(this.client.Embed('warn', e.message));
     }
   }
