@@ -13,6 +13,7 @@ module.exports = class AvatarCommand extends Command {
         {
           id: "user",
           match: "phrase",
+          type: "user",
           default: m => m.author
         }
       ]
