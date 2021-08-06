@@ -22,8 +22,8 @@ module.exports = class AvatarCommand extends Command {
   async exec(msg, {user}) {
 
     let embed = this.client.embed("default")
-    .setImage(user.displayAvatarURL)
-    .setAuthor(`Avatar from ${user}`)
+    .setImage(user.displayAvatarURL({dynamic: true, format: "png"}))
+    .setAuthor(`Avatar from ${user.username}`)
     return msg.channel.send(embed);
 
   }
