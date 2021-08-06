@@ -11,7 +11,7 @@ function Embed(color, message) {
     const embed = new MessageEmbed()
     .setColor(ListColors[color])
     .setTimestamp()
-    .setFooter(`${prefix}help [command] • Grace Bot`);
+    .setFooter(`${prefix}help [command] • Tiara Bot`);
     if(message) embed.setDescription(message);
     return embed;
 }
