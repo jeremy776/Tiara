@@ -8,7 +8,7 @@ module.exports = class AvatarCommand extends Command {
       description: {
         content: "Melihat avatar dari user/member lain"
       },
-      
-    })
+      cooldown: 3000
+    });
   }
 }
