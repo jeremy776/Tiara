@@ -1,3 +1,4 @@
+/* eslint global-require: "off" */
 const Express = require("express");
 const App = Express();
 const Title = "Night Rest";
