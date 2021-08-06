@@ -3,7 +3,7 @@ const { join } = require('path');
 const { Embed } = require('../Utils/Embed')
 const Config = require('../config');
 
-module.exports = class NightRest extends AkairoClient {
+module.exports = class TiaraClient extends AkairoClient {
     constructor() {
         super({
             ownerID: Config.ownersID
