@@ -10,7 +10,8 @@ const ListColors = {
 function Embed(color, message) {
     const embed = new MessageEmbed()
     .setColor(ListColors[color])
-    .setFooter(`${prefix}help [command] | Shopia Bot`);
+    .setTimestamp()
+    .setFooter(`${prefix}help [command] • Shopia Bot`);
     if(message) embed.setDescription(message);
     return embed;
 }
