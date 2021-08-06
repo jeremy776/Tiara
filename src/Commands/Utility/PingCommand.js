@@ -16,6 +16,7 @@ module.exports = class PingCommand extends Command {
             const message = await msg.channel.send(`Get info...`);
             const embed = this.client.embed('info')
             .addField('API', `${Math.floor(this.client.ws.ping)} ms`)
+            .addField("Latency", `${message.createdTimestamp - msg.createdTimestamp}`)
             .setTimestamp();
             setTimeout(() => {
                 message.edit('', embed)
