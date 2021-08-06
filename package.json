@@ -2,15 +2,27 @@
   "name": "uh",
   "version": "1.0.0",
   "description": "nvm",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node .",
+    "start": "node src/index.js",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Side",
   "license": "MIT",
   "dependencies": {
     "ejs": "^3.1.6",
+    "discord-akairo": "^8.1.0",
+    "discord.js": "^12.5.3",
     "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
   }
 }
