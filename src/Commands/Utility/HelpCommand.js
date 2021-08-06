@@ -24,7 +24,7 @@ module.exports = class HelpCommand extends Command {
         const embed = this.client.embed('default')
           .setAuthor(this.client.user.username + " List Commands")
         for (const category of this.handler.categories.values()) {
-          embed.addField(category, `${category.filter((cmd) => cmd.aliases.length > 0).map((cmd) => `\`${cmd.aliases[0]}\``).join(', ')}`);
+          embed.addField(category, `${category.filter((cmd) => cmd.aliases.length > 0).map((cmd) => `**\`${cmd.aliases[0]}\`**`).join(', ')}`);
         }
         return msg.channel.send(embed);
       }
