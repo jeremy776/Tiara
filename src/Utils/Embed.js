@@ -10,7 +10,7 @@ const ListColors = {
 function Embed(color, message) {
     const embed = new MessageEmbed()
     .setColor(ListColors[color])
-    .setFooter('Night Rest');
+    .setFooter(`${prefix}help [command] | Shopia Bot`);
     if(message) embed.setDescription(message);
     return embed;
 }
