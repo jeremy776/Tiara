@@ -1,4 +1,4 @@
-const { command } = require("discord-akairo");
+const { Command } = require("discord-akairo");
 
 module.exports = class HelpCommand extends Command {
   constructor() {
@@ -23,7 +23,7 @@ module.exports = class HelpCommand extends Command {
       if (!command) {
         const embed = this.client.Embed('info')
           .addField(`${this.client.user.username} command's`, `${this.client.config.prefix}help [command]`);
-        for (const category of this.commandHandler.categories.values()) {
+        for (const category of this.handler.categories.values()) {
           embed.addField(category, `${category.filter((cmd) => cmd.aliases.length > 0).map((cmd) => `\`${cmd.aliases[0]}\``).join(', ')}`);
         }
         return msg.channel.send(embed);
