@@ -5,7 +5,7 @@ module.exports = class PingCommand extends Command {
         super('ping', {
             aliases: ['ping'],
             description: {
-                content: 'See latency Discord Bot'
+                content: 'Ping Bot ini'
             },
             category: 'Utility',
             cooldown: 3000
