@@ -5,7 +5,7 @@ module.exports = class HelpCommand extends Command {
     super('help', {
       aliases: ['help'],
       description: {
-        content: 'Get list command',
+        content: 'Daftar command yang tersedia di bot ini',
       },
       category: 'Utility',
       cooldown: 3000,
@@ -30,7 +30,7 @@ module.exports = class HelpCommand extends Command {
       }
       const embed = this.client.embed('default')
         .addField('Description', `${command.description.content ? command.description.content : ''} ${command.description.ownerOnly ? '\n**[Owner Only]**' : ''}`)
-        .addField('Alias', command.aliases.length > 1 ? `\`${command.aliases.join('` `')}\`` : 'None.', true)
+        .addField('Alias', command.aliases.length > 1 ? `\`${command.aliases.join('`, `')}\`` : 'None.', true)
       return msg.channel.send(embed);
     } catch (e) {
       return msg.channel.send(this.client.Embed('warn', e.message));
