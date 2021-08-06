@@ -9,7 +9,7 @@ const Title = Client.user;
 App.use(Express.static("./public/"));
 
 App.get("/", function(Req, Res) {
-  console.log(Client.user.user.username);
+  console.log(Client.user);
   Res.render("index.ejs", {
     Req: Req,
     Res: Res,
