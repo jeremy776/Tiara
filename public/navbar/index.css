@@ -48,11 +48,14 @@
     position: relative;
     list-style: none;
   }
+  nav ul li a.active {
+    color: white;
+  }
   nav ul li a {
     position: relative;
     margin: 0 15px;
     text-decoration: none;
-    color: white;
+    color: rgba(225, 225, 225, 0.6);
     letter-spacing: 2px;
     font-weight: 500;
     transition: 0.4s;
