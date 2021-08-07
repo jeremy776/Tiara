@@ -4,7 +4,7 @@ const App = Express();
 const DiscordClient = require('./Structures/Client');
 const Client = new DiscordClient();
 
-const Title = this.client.user.username;
+const Title = "Title";
 
 App.use(Express.static("./public/"));
 
