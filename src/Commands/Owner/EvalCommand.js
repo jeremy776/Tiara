@@ -39,10 +39,10 @@ module.exports = class EvalCommand extends Command {
       .replace(/@/g, `@${String.fromCharCode(8203)}`);
       */
 
-      return msg.channel.send(this.client.embed('default', `\`\`\`\n${evals}\`\`\``))
+      return msg.channel.send(this.client.embed('default', `\`\`\`js\n${evals}\`\`\``))
 
     }catch(err){
-      const error = this.client.embed('error', `\`\`\`\n${err}\`\`\``)
+      const error = this.client.embed('error', `\`\`\`js\n${err}\`\`\``)
       return msg.channel.send(error)
     }
     
