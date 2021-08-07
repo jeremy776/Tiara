@@ -2,6 +2,8 @@
   * {
     padding: 0;
     margin: 0;
+    color: white;
+    font-family: sans-serif;
     box-sizing: border-box;
   }
   body {
@@ -11,11 +13,13 @@
   nav.NewStyleNavbar {
     background-color: #5865F2;
     padding: 25px 30px;
+    position: fixed;
   }
   nav {
     font-family: "Poppins", sans-serif;
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
+    background-color: #191c25;
     left: 0;
     width: 100%;
     display: flex;
@@ -53,12 +57,24 @@
     font-weight: 500;
     transition: 0.4s;
   }
-  .humberger {
+  .hamburger {
     display: none;
   }
   @media (max-width: 760px) {
-    .humberger {
+    .hamburger {
+      border: none;
+      background: none;
+      outline: none;
       display:block;
+    }
+    .hamburger.on .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.on .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.on .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
     }
     nav, nav.NewStyleNavbar {
       padding: 20px 20px;
@@ -75,21 +91,32 @@
     }
     nav ul {
       position: absolute;
-      /*align-items: start;*/
+      background-color: #191c25;
+      
       flex-direction: column;
       width: 100%;
-      top: -3000%;
+      top: -500%;
       /*top: 68px;*/
       left: 0;
      /* padding-left: 5px;*/
       transition: 0.7s ease;
     }
-    nav ul li a {
-      margin-bottom: 20px;
-      padding: 10px;
-      display: block !important;
+    nav ul.on {
+      top: 68px;
+    }
+    nav ul li {
+      /*margin-bottom: 20px;
+      /*padding: 5px;*/
       width: 100%;
-      font-size: 18px;
+      display: inline-block !important;
+      /*font-size: 18px;*/
+    }
+    nav ul li a {
+      display: inline-block;
+      padding: 10px;
+      font-size: 15px;
+      width: 90%;
+      margin-bottom: 20px;
     }
     nav.NewStyleNavbar ul {
       background-color: #5865F2;
