@@ -5,6 +5,7 @@ const DiscordClient = require('./Structures/Client');
 const Client = new DiscordClient();
 const Passport = require("passport");
 const Strategy = require("passport-discord").Strategy;
+const Session = require("express-session");
 
 Passport.serializeUser(function(User, Done) {
   Done(null, User);
@@ -16,7 +17,11 @@ Passport.deserializeUser(function(Obj, Done) {
 
 App.use(Passport.initialize());
 App.use(Passport.session());
-
+App.use(Session({
+  secret: "aond9$((_8#8+3!_;&(&84!+58&(+&)?49";
+  resave: true,
+  saveUninitialized: false
+}));
 const scopes = ["identify"];
 const prompt = "consent";
 
