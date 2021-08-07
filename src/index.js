@@ -21,7 +21,7 @@ const scopes = ["identify"];
 const prompt = "consent";
 
 Passport.use(new Strategy({
-  clientID: "",
+  clientID: "702874025189179533",
   clientSecret: process.env.SECRET,
   callbackURL: process.env.CALLBACK,
   scope: scopes,
