@@ -5,12 +5,12 @@ window.addEventListener("scroll", function() {
 
 window.addEventListener("load", function() {
 
-  document.onclick = (element) => {
+  /*document.onclick = (element) => {
     if(element.target.class !== "hamburger") {
       document.querySelector(".hamburger").classList.remove("on");
       document.querySelector(".headerList").classList.remove("on");
     }
-  }
+  }*/
 
   document.querySelector(".hamburger").addEventListener("click", function() {
     document.querySelector(".hamburger").classList.toggle("on");
