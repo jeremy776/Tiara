@@ -3,7 +3,7 @@ window.addEventListener("scroll", function() {
   nav.classList.toggle("NewStyleNavbar", window.scrollY > 0);
 });
 
-function HamBurger() {
+window.addEventListener("click", function() {
   document.querySelector(".hamburger").classList.toggle("on");
   document.querySelector(".headerList").classList.toggle("on");
   console.log("click")
