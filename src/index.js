@@ -18,7 +18,7 @@ Passport.deserializeUser(function(Obj, Done) {
 App.use(Passport.initialize());
 App.use(Passport.session());
 App.use(Session({
-  secret: "aond9$((_8#8+3!_;&(&84!+58&(+&)?49";
+  secret: "aond9$((_8#8+3!_;&(&84!+58&(+&)?49",
   resave: true,
   saveUninitialized: false
 }));
