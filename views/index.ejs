@@ -23,7 +23,7 @@
         <li><a href="#">Commands</a></li>
         <li><a href="/discord/invite">Discord</a></li>
         <% if(Req.user) { %>
-        <li><a href="/discord/logout'><%- Req.user.username %>#<%- req.user.discriminator %></a></li>
+        <li><a href="/discord/logout"><%- Req.user.username %>#<%- req.user.discriminator %></a></li>
         <% } else { %>
         <li><a href="/discord/login">Login</a></li>
         <% } %>
