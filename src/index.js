@@ -12,6 +12,7 @@ App.get("/", function(Req, Res) {
   Res.render("index.ejs", {
     Req: Req,
     Res: Res,
+    Bot: Client,
     Title: Title
   });
 });
