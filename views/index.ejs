@@ -20,10 +20,13 @@
       </button>
       <ul class="headerList">
         <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Teams</a></li>
-        <li><a href="#">Discord</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="#">Commands</a></li>
+        <li><a href="/discord/invite">Discord</a></li>
+        <% if(Req.user) { %>
+        <li><a href="/discord/logout'><%- Req.user.username %>#<%- req.user.discriminator %></a></li>
+        <% } else { %>
+        <li><a href="/discord/login">Login</a></li>
+        <% } %>
       </ul>
     </nav>
     <section></section>
