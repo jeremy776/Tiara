@@ -44,10 +44,7 @@ App.get("/", function(Req, Res) {
   });
 });
 
-App.get("/discord/login", Passport.authenticate("discord", { scope: scopes, prompt: prompt }),
-  function(Req, Res) {
-  
-  }
+App.get("/discord/login", Passport.authenticate("discord", { scope: scopes, prompt: prompt }), function(Req, Res) {
 });
 
 App.get("/discord/callback", Passport.authenticate("discord", { failureRedirect: "/" }), async function(Req, Res) {
