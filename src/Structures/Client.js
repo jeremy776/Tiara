@@ -12,6 +12,7 @@ module.exports = class TiaraClient extends AkairoClient {
             partials: ['CHANNELS', 'MESSAGE', 'GUILD_MEMBER'],
             ws: { intents: ['GUILD_MEMBERS', 'GUILDS', 'GUILD_MESSAGES', 'GUILD_VOICE_STATES'] },
         });
+        this.client.api.jov = "https://apijoov-production.up.railway.app";
         this.config = Config;
         this.embed = Embed;
         this.commandHandler = new CommandHandler(this, {
