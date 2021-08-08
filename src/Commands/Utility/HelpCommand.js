@@ -21,7 +21,7 @@ module.exports = class HelpCommand extends Command {
   async exec(msg, { command }) {
     try {
       if (!command) {
-        const embed = this.client.embed('default', `>>> Hallo **${msg.author.username}**, Saya **${this.client.user.username}** dan berasal dari **Indonesia**, berikut adalah beberapa command yang bisa di gunakan. Ketik **${this.client.config.prefix}command** untuk menjalankan command, ketik **${this.client.config.prefix}help nama_command** untuk mendapatkan informasi tentang command.\nPrefix: **${this.client.config.prefix}**`)
+        const embed = this.client.embed('default')// `>>> Hallo **${msg.author.username}**, Saya **${this.client.user.username}** dan berasal dari **Indonesia**, berikut adalah beberapa command yang bisa di gunakan. Ketik **${this.client.config.prefix}command** untuk menjalankan command, ketik **${this.client.config.prefix}help nama_command** untuk mendapatkan informasi tentang command.\nPrefix: **${this.client.config.prefix}**`)
           .setAuthor(this.client.user.username + " List Commands")
         for (const category of this.handler.categories.values()) {
           embed.addField(category, `${category.filter((cmd) => cmd.aliases.length > 0).map((cmd) => `**\`${cmd.aliases[0]}\`**`).join(', ')}`);
