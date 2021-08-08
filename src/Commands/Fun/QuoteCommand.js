@@ -17,11 +17,11 @@ module.exports = class QuoteCommands extends Command {
   async exec(msg) {
     try {
       const baseURL = await axios.get(`${this.client.apijov}/v1/fun/quote`);
-      translate(baseURL.data.content, {to: "id"}).then(res => {
-        return msg.channel.send(this.client.embed("default", `***"${res.text}"***\n\n*- ${baseURL.data.author}*`));
-      }).catch(e => {
+      //translate(baseURL.data.content, {to: "id"}).then(res => {
+        return msg.channel.send(this.client.embed("default", `***"${baseURL.data.content}"***\n\n*- ${baseURL.data.author}*`));
+      /*}).catch(e => {
         return msg.channel.send(`\`\`\`js\n${e.message}\`\`\``);
-      });
+      });*/
     } catch(e) {
       return msg.channel.send(`\`\`\`js\n${e.message}\`\`\``);
     }
