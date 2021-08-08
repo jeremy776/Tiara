@@ -24,7 +24,7 @@ module.exports = class ScreenShoot extends Command {
       .setImage(baseURL);
       let message = await msg.channel.send("Mengambil gambar...");
       setTimeout(() => {
-        message.edit("", embed)
+        message.edit("", { files: [attachment:baseURL, name:"screenshoot.png"] });
       }, 4000)
     } catch(e) {
       return msg.channel.send(`\`\`\`js\n${e.message}\`\`\``);
