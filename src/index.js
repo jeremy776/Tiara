@@ -20,7 +20,7 @@ App.use(Passport.session());
 App.use(Session({
   secret: "aond9$((_8#8+3!_;&(&84!+58&(+&)?49",
   resave: true,
-  saveUninitialized: false
+  saveUninitialized: true
 }));
 const scopes = ["identify"];
 const prompt = "consent";
@@ -52,7 +52,7 @@ App.get("/", function(Req, Res) {
 App.get("/discord/login", Passport.authenticate("discord", { scope: scopes, prompt: prompt }), function(Req, Res) {
 });
 
-App.get("/discord/callback", Passport.authenticate("discord", { failureRedirect: "/" }), async function(Req, Res) {
+App.get("/discord/callback", Passport.authenticate("discord", { failureRedirect: "/g" }), async function(Req, Res) {
   Res.redirect(Req.session.url ? Req.session.url : "/");
   Req.session.url = null;
 });
