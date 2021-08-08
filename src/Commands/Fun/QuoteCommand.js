@@ -1,5 +1,6 @@
 const { Command } = require("discord-akairo");
 const translate = require("translatte");
+const axios = require("axios");
 
 module.exports = class QuoteCommands extends Command {
   constructor() {
