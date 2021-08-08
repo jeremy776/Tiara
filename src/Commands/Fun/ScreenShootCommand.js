@@ -23,9 +23,7 @@ module.exports = class ScreenShoot extends Command {
       let embed = this.client.embed("default")
       .setImage(baseURL);
       let message = await msg.channel.send("Mengambil gambar...");
-      setTimeout(() => {
-        message.edit("", { files: [{attachment:baseURL, name:"screenshoot.png"}] });
-      }, 4000)
+      return msg.channel.send({ files: [{attachment:baseURL, name:"screenshoot.png"}] }).then(x => message.delete())
     } catch(e) {
       return msg.channel.send(`\`\`\`js\n${e.message}\`\`\``);
     }
