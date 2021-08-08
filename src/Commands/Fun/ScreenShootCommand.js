@@ -6,7 +6,7 @@ module.exports = class ScreenShoot extends Command {
       aliases: ["screenshoot", "screen-shoot", "ss"],
       description: {
         content: "Mengambil gambar web"
-      }
+      },
       cooldown: 3000,
       category: "Fun"
     });
