@@ -15,6 +15,7 @@
     "ejs": "^3.1.6",
     "discord-akairo": "^8.1.0",
     "discord.js": "^12.5.3",
+    "axios": "^0.21.1",
     "express-session": "^1.17.2",
     "passport": "^0.4.1",
     "passport-discord": "^0.1.4",
