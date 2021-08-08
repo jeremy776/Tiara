@@ -9,11 +9,11 @@ module.exports = class AkinatorCommand extends Command {
         content: "Memainkan akinator."
       },
       category: "Games",
-      cooldown: 1000
+      cooldown: 3000
     })
   }
 
   async exec(msg) {
-    Akinator(msg, "id", true);
+    Akinator(msg, this.client, "id");
   }
 }
