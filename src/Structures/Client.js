@@ -15,7 +15,8 @@ module.exports = class TiaraClient extends AkairoClient {
         this.config = Config;
         this.embed = Embed;
         this.commandHandler = new CommandHandler(this, {
-            allowMention: false,
+            allowMention: true,
+            handleEdits: true,
             directory: join(__dirname, '..', 'Commands'),
             defaultCooldown: 3000,
             prefix: Config.prefix,
