@@ -42,6 +42,7 @@ App.use(Express.static("./public/"));
 
 App.get("/", function(Req, Res) {
   Req.session.url = Req.url;
+  console.log(Req.user);
   Res.render("index.ejs", {
     Req: Req,
     Res: Res,
