@@ -14,6 +14,6 @@ module.exports = class AkinatorCommand extends Command {
   }
 
   async exec(msg) {
-    return Akinator(msg, this.client, "id");
+    Akinator(msg, "id", true);
   }
 }
