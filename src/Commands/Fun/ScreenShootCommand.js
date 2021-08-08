@@ -22,10 +22,10 @@ module.exports = class ScreenShoot extends Command {
       let baseURL = this.client.apijov + "/v1/info/ss?web="+url;
       let embed = this.client.embed("default")
       .setImage(baseURL);
-      let message = await msg.channel.send("Mohon tunggu. sedang mengambil gambar");
+      let message = await msg.channel.send("Mengambil gambar...");
       setTimeout(() => {
         message.edit("", embed)
-      }, 2000)
+      }, 4000)
     } catch(e) {
       return msg.channel.send(`\`\`\`js\n${e.message}\`\`\``);
     }
