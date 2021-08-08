@@ -1,12 +1,12 @@
 const { Command } = require("discord-akairo");
-const akinator = require("discord.js-akinator");
+const Akinator = require("discord.js-akinator");
 
 module.exports = class AkinatorCommand extends Command {
   constructor() {
     super("akinator", {
       aliases: ["akinator"],
       description: {
-        content: "Mainkan tebak gambar untuk mengasah otak"
+        content: "Memainkan akinator."
       },
       category: "Games",
       cooldown: 1000
