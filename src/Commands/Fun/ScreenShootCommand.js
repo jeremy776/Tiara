@@ -16,7 +16,7 @@ module.exports = class ScreenShoot extends Command {
     try {
       let baseURL = this.client.api.joov + "/v1/info/ss?web=google.com";
       let embed = this.client.embed("default")
-      .setImage(baseUrl);
+      .setImage(baseURL);
       return msg.channel.send(embed);
     } catch(e) {
       return msg.channel.send(`\`\`\`js\n${e.message}\`\`\``);
