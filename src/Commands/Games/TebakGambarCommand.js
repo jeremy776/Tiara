@@ -1,4 +1,4 @@
-const { Command } = require("discord.js");
+const { Command } = require("discord-akairo");
 
 module.exports = class TebakGambarCommand extends Command {
   constructor() {
