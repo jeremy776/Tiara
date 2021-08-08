@@ -7,17 +7,25 @@ module.exports = class ScreenShoot extends Command {
       description: {
         content: "Mengambil gambar web"
       },
+      args: [
+        {
+          id: "url"
+        }
+      ],
       cooldown: 3000,
       category: "Fun"
     });
   }
 
-  async exec(msg) {
+  async exec(msg, { url }) {
     try {
-      let baseURL = this.client.apijov + "/v1/info/ss?web=google.com";
+      let baseURL = this.client.apijov + "/v1/info/ss?web="+url;
       let embed = this.client.embed("default")
       .setImage(baseURL);
-      return msg.channel.send(embed);
+      let message = await msg.channel.send("Mohon tunggu. sedang mengambil gambar");
+      setTimeout(() => {
+        message.edit("", embed)
+      }, 2000)
     } catch(e) {
       return msg.channel.send(`\`\`\`js\n${e.message}\`\`\``);
     }
