@@ -9,7 +9,7 @@ module.exports = class TebakGambarCommand extends Command {
       },
       category: "Games",
       cooldown: 15000
-    }
+    })
   }
 
   async exec(msg) {
