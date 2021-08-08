@@ -14,7 +14,7 @@ module.exports = class ScreenShoot extends Command {
 
   async exec(msg) {
     try {
-      let baseURL = this.client.apijoov + "/v1/info/ss?web=google.com";
+      let baseURL = this.client.apijov + "/v1/info/ss?web=google.com";
       let embed = this.client.embed("default")
       .setImage(baseURL);
       return msg.channel.send(embed);
