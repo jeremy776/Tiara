@@ -7,7 +7,8 @@ module.exports = class TebakGambarCommand extends Command {
       description: {
         content: "Mainkan tebak gambar untuk mengasah otak"
       },
-      category: "Games"
+      category: "Games",
+      cooldown: 15000
     }
   }
 
