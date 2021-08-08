@@ -15,13 +15,14 @@ Passport.deserializeUser(function(Obj, Done) {
   Done(null, Obj);
 });
 
-App.use(Passport.initialize());
-App.use(Passport.session());
 App.use(Session({
   secret: "aond9$((_8#8+3!_;&(&84!+58&(+&)?49",
   resave: true,
   saveUninitialized: true
 }));
+App.use(Passport.initialize());
+App.use(Passport.session());
+
 const scopes = ["identify"];
 const prompt = "consent";
 
