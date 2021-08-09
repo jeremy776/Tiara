@@ -28,6 +28,9 @@ module.exports = class DompetCommand extends Command {
     if(!data) {
       embed.setDescription(`**Uang**: Rp.**0**\n**Bank**: Rp.**0**`);
       return msg.channel.send(embed)
+    } else {
+      embed.setDescription(`**Uang**: Rp.**${data.uang}**\n**Bank**: Rp.**${data.bank}**`);
+      return msg.channel.send(embed)
     }
   }
 }
