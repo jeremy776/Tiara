@@ -20,7 +20,7 @@ module.exports = class DompetCommand extends Command {
     })
   }
 
-  async exec(msg) {
+  async exec(msg, {user}) {
     let embed = this.client.embed("default")
     .setAuthor(`Isi dompet dari ${user.username}`, user.displayAvatarURL({dynamic: trie}));
 
