@@ -8,7 +8,14 @@ module.exports = class DompetCommand extends Command {
       category: "Economy",
       description: {
         content: "cek isi dompet kamu atau orang lain"
-      }
+      },
+      args: [
+        {
+          id: "user",
+          type: "user",
+          default: m => m.author
+        }
+      ]
     })
   }
 
