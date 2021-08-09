@@ -2,7 +2,7 @@
 const Express = require("express");
 const App = Express();
 const DiscordClient = require('./Structures/Client');
-const Client = new DiscordClient();
+const Client = new DiscordClient({fetchAllMembers: true});
 const Passport = require("passport");
 const Strategy = require("passport-discord").Strategy;
 const Session = require("express-session");
