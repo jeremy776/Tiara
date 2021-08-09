@@ -24,7 +24,7 @@ module.exports = class DompetCommand extends Command {
     let embed = this.client.embed("default")
     .setAuthor(`Isi dompet dari ${user.username}`, user.displayAvatarURL({dynamic: true}));
 
-    let data = await this.client.accountDB(msg.author.id);
+    let data = await this.client.accountDB.get(msg.author.id);
     if(!data) {
       embed.setDescription(`**Uang**: Rp.**0**\n**Bank**: Rp.**0**`);
       return msg.channel.send(embed)
