@@ -13,6 +13,7 @@ module.exports = class DompetCommand extends Command {
         {
           id: "user",
           type: "user",
+          match: "phrase",
           default: m => m.author
         }
       ]
