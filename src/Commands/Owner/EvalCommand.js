@@ -3,7 +3,7 @@ const { Command } = require("discord-akairo");
 module.exports = class EvalCommand extends Command {
   constructor() {
     super('eval', {
-      aliases: ["eval", "ev"],
+      aliases: ["eval", "ev", "e"],
       ownerOnly: true,
       description: {
         content: "nah"
