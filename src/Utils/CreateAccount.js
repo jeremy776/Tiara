@@ -4,7 +4,7 @@ function CreateAccount(msg) {
     uang: 0,
     bank: 0,
     pekerjaan: null,
-    role: "user",
+    role: "karyawan",
   }
   return this.client.accountDB.set(msg.author.id, data);
 }
