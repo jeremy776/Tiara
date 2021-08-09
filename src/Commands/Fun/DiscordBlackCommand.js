@@ -21,7 +21,7 @@ module.exports = class DiscordBlackCommand extends Command {
   }
   async exec(msg, { user }) {
     try {
-      let baseURL = this.client.apijoov + '/v1/canvas/discordblack?image='+user.displayAvatarURL({format: 'png', size: 2048});
+      let baseURL = this.client.apijov + '/v1/canvas/discordblack?image='+user.displayAvatarURL({format: 'png', size: 2048});
       let message = await msg.channel.send('Mohon tunggu...');
       return msg.channel.send({files:[{attachment:baseURL, name:'black-.png'}]}).then(a => message.delete());
     } catch(e) {
