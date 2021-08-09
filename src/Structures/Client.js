@@ -16,7 +16,7 @@ module.exports = class TiaraClient extends AkairoClient {
         this.apijov = "https://apijoov-production.up.railway.app";
         this.config = Config;
         this.embed = Embed;
-        this.accountDB = new Database("mongodb+srv://jeremykusuma:christianjeremykusuma@cluster0.d0mjj.mongodb.net/Tiara?retryWrites=true&w=majority", "Userakun");
+        this.accountDB = new Database(process.env.DATABASEURL, "Userakun");
         this.commandHandler = new CommandHandler(this, {
             allowMention: true,
             handleEdits: true,
