@@ -1,6 +1,6 @@
 const { Command } = require('discord-akairo');
 
-module.exports = class DiscordBlackCommand extends Command {
+module.exports = class BlurCommand extends Command {
   constructor() {
     super("blur", {
       aliases: ['blur'],
