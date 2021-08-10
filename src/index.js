@@ -6,6 +6,7 @@ const Client = new DiscordClient({fetchAllMembers: true});
 const Passport = require("passport");
 const Strategy = require("passport-discord").Strategy;
 const Session = require("express-session");
+require('dotenv').config();
 
 Passport.serializeUser(function(User, Done) {
   Done(null, User);

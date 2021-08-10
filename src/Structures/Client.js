@@ -3,6 +3,7 @@ const { join } = require('path');
 const { Embed } = require('../Utils/Embed');
 const Config = require('../config');
 const { Database } = require("quickmongo");
+require('dotenv').config();
 
 module.exports = class TiaraClient extends AkairoClient {
     constructor() {
