@@ -5,7 +5,7 @@ module.exports = class FoodCommand extends Command {
   constructor() {
     super("food", {
       aliases: ["food"],
-      category: "Fun",
+      category: "Image",
       cooldown: 2000,
       description: {
         content: "Memberikan random gambar makanan"
