@@ -4,7 +4,7 @@ module.exports = class GayCommand extends Command {
   constructor() {
     super("gay", {
       aliases: ['gay'],
-      category: 'Fun',
+      category: 'Image',
       cooldown: 3000,
       description: {
         content: 'jangan gay, gk baik tau'
