@@ -4,7 +4,7 @@ module.exports = class BlurCommand extends Command {
   constructor() {
     super("blur", {
       aliases: ['blur'],
-      category: 'Fun',
+      category: 'Image',
       cooldown: 3000,
       description: {
         content: 'blur avatar user'
