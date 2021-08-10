@@ -4,7 +4,7 @@ module.exports = class DiscordBlackCommand extends Command {
   constructor() {
     super("discordblack", {
       aliases: ['discord-black', 'discordblack'],
-      category: 'Fun',
+      category: 'Image',
       cooldown: 3000,
       description: {
         content: 'discord black dengan avatar user'
